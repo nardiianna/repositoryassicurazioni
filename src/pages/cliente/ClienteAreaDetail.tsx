@@ -41,7 +41,7 @@ export function ClienteAreaDetail() {
   if (!area || !session) return <p className="p-8 text-sm text-gray-500">Area non trovata.</p>
 
   return (
-    <div>
+    <div className="min-h-screen w-full bg-white">
       <TopBar title={area.nome_area} />
       <div className="p-4 sm:p-6 space-y-6 max-w-2xl">
         <StatoBadge stato={area.stato} />

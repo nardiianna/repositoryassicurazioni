@@ -76,7 +76,7 @@ export function AdminClienteDetail() {
   if (!cliente) return <p className="p-8 text-sm text-gray-500">Cliente non trovato.</p>
 
   return (
-    <div>
+    <div className="min-h-screen w-full bg-white">
       <TopBar title={cliente.nome} />
       <div className="p-4 sm:p-6 space-y-8 max-w-3xl">
         {error && <p className="text-sm text-red-600">{error}</p>}

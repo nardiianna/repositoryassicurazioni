@@ -40,7 +40,7 @@ export function ClienteDashboard() {
   if (!societa) return <p className="p-8 text-sm text-gray-500">Società non trovata.</p>
 
   return (
-    <div>
+    <div className="min-h-screen w-full bg-white">
       <TopBar title={societa.nome} />
       <div className="p-4 sm:p-6 space-y-8 max-w-4xl">
         {categorie.map((cat) => (

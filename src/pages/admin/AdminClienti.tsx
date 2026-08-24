@@ -50,7 +50,7 @@ export function AdminClienti() {
   }
 
   return (
-    <div>
+    <div className="min-h-screen w-full bg-white">
       <TopBar title="Repository Assicurazioni — Admin" />
       <div className="p-4 sm:p-6 space-y-4">
         <div className="flex justify-between items-center">

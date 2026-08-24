@@ -14,9 +14,10 @@ import logo from './assets/logo-nardi-federico.png'
 
 function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-8 px-6 bg-brand-900">
-      <img src={logo} alt="Nardi Federico" className="w-40 rounded-lg shadow-lg" />
-      <h1 className="text-white text-lg font-semibold text-center">Repository Assicurazioni</h1>
+    <div className="min-h-screen w-full flex flex-col items-center justify-center gap-10 px-6 bg-brand-900">
+      <h1 className="text-white text-3xl sm:text-4xl font-bold text-center tracking-tight">
+        Repository Assicurazioni
+      </h1>
       <div className="w-full max-w-xs flex flex-col gap-4">
         <Link
           to="/admin"
@@ -31,6 +32,7 @@ function Home() {
           Area Clienti
         </Link>
       </div>
+      <img src={logo} alt="Nardi Federico" className="w-16 rounded opacity-80" />
     </div>
   )
 }
