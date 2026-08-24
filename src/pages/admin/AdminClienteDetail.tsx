@@ -78,7 +78,7 @@ export function AdminClienteDetail() {
   return (
     <div>
       <TopBar title={cliente.nome} />
-      <div className="p-6 space-y-8 max-w-3xl">
+      <div className="p-4 sm:p-6 space-y-8 max-w-3xl">
         {error && <p className="text-sm text-red-600">{error}</p>}
 
         <section className="space-y-3">
@@ -92,7 +92,7 @@ export function AdminClienteDetail() {
             {societa.map((s) => (
               <div
                 key={s.id}
-                className="flex items-center justify-between rounded border border-gray-200 p-3"
+                className="flex flex-wrap items-center justify-between gap-2 rounded border border-gray-200 p-3"
               >
                 <button
                   onClick={() => navigate(`/admin/societa/${s.id}`)}
@@ -115,17 +115,17 @@ export function AdminClienteDetail() {
             Crea l'utente dalla Dashboard Supabase (Authentication → Add user), poi incolla qui il suo UID
             per collegarlo a questo cliente.
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row">
             <input
               value={linkingUid}
               onChange={(e) => setLinkingUid(e.target.value)}
               placeholder="UID utente Supabase"
-              className="flex-1 rounded border border-gray-300 px-3 py-2 text-sm"
+              className="flex-1 min-w-0 rounded border border-gray-300 px-3 py-2 text-base"
             />
             <button
               onClick={handleCollegaLogin}
               disabled={linking || !linkingUid.trim()}
-              className="rounded bg-brand-900 hover:bg-brand-700 text-white px-4 py-2 text-sm disabled:opacity-50"
+              className="shrink-0 rounded bg-brand-900 hover:bg-brand-700 text-white px-4 py-2 text-sm disabled:opacity-50"
             >
               {linking ? 'Collegamento...' : 'Collega'}
             </button>

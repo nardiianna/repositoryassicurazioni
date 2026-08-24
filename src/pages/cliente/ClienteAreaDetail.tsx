@@ -43,7 +43,7 @@ export function ClienteAreaDetail() {
   return (
     <div>
       <TopBar title={area.nome_area} />
-      <div className="p-6 space-y-6 max-w-2xl">
+      <div className="p-4 sm:p-6 space-y-6 max-w-2xl">
         <StatoBadge stato={area.stato} />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Campo label="Garanzia" valore={area.garanzia} />

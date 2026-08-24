@@ -69,7 +69,7 @@ export function AdminAreaDetail() {
   return (
     <div>
       <TopBar title={area.nome_area} />
-      <div className="p-6 space-y-6 max-w-2xl">
+      <div className="p-4 sm:p-6 space-y-6 max-w-2xl">
         {error && <p className="text-sm text-red-600">{error}</p>}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -78,7 +78,7 @@ export function AdminAreaDetail() {
             <select
               value={area.stato}
               onChange={(e) => updateField('stato', e.target.value as StatoCopertura)}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             >
               {STATI.map((s) => (
                 <option key={s.value} value={s.value}>
@@ -92,7 +92,7 @@ export function AdminAreaDetail() {
             <input
               value={area.garanzia ?? ''}
               onChange={(e) => updateField('garanzia', e.target.value)}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             />
           </label>
           <label className="text-sm space-y-1">
@@ -100,7 +100,7 @@ export function AdminAreaDetail() {
             <input
               value={area.prodotto ?? ''}
               onChange={(e) => updateField('prodotto', e.target.value)}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             />
           </label>
           <label className="text-sm space-y-1">
@@ -108,7 +108,7 @@ export function AdminAreaDetail() {
             <input
               value={area.compagnia ?? ''}
               onChange={(e) => updateField('compagnia', e.target.value)}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             />
           </label>
           <label className="text-sm space-y-1">
@@ -116,7 +116,7 @@ export function AdminAreaDetail() {
             <input
               value={area.numero_polizza ?? ''}
               onChange={(e) => updateField('numero_polizza', e.target.value)}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             />
           </label>
           <label className="text-sm space-y-1">
@@ -125,7 +125,7 @@ export function AdminAreaDetail() {
               type="date"
               value={area.scadenza ?? ''}
               onChange={(e) => updateField('scadenza', e.target.value)}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             />
           </label>
           <label className="text-sm space-y-1">
@@ -135,7 +135,7 @@ export function AdminAreaDetail() {
               step="0.01"
               value={area.premio ?? ''}
               onChange={(e) => updateField('premio', e.target.value === '' ? null : Number(e.target.value))}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             />
           </label>
           <label className="text-sm space-y-1">
@@ -143,7 +143,7 @@ export function AdminAreaDetail() {
             <input
               value={area.massimali ?? ''}
               onChange={(e) => updateField('massimali', e.target.value)}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             />
           </label>
           <label className="text-sm space-y-1 sm:col-span-2">
@@ -151,7 +151,7 @@ export function AdminAreaDetail() {
             <input
               value={area.franchigie ?? ''}
               onChange={(e) => updateField('franchigie', e.target.value)}
-              className="w-full rounded border border-gray-300 px-3 py-2"
+              className="w-full rounded border border-gray-300 px-3 py-2 text-base"
             />
           </label>
         </div>

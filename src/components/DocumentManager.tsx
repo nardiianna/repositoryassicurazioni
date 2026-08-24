@@ -89,11 +89,11 @@ export function DocumentManager({
     <div className="rounded-lg border border-gray-200 p-4 space-y-5">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h3 className="text-sm font-semibold text-gray-800">Documenti</h3>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <select
             value={tipoScelto}
             onChange={(e) => setTipoScelto(e.target.value as TipoDocumento)}
-            className="rounded border border-gray-300 text-xs px-2 py-1.5"
+            className="min-w-0 rounded border border-gray-300 text-base px-2 py-1.5 sm:text-xs"
           >
             {(Object.keys(TIPO_LABEL) as TipoDocumento[]).map((tipo) => (
               <option key={tipo} value={tipo}>

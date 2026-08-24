@@ -42,7 +42,7 @@ export function ClienteDashboard() {
   return (
     <div>
       <TopBar title={societa.nome} />
-      <div className="p-6 space-y-8 max-w-4xl">
+      <div className="p-4 sm:p-6 space-y-8 max-w-4xl">
         {categorie.map((cat) => (
           <section key={cat.id} className="space-y-2">
             <h3 className="font-semibold text-brand-800">{cat.nome}</h3>

@@ -82,10 +82,10 @@ export function AdminSocietaDetail() {
   return (
     <div>
       <TopBar title={societa.nome} />
-      <div className="p-6 space-y-8 max-w-4xl">
+      <div className="p-4 sm:p-6 space-y-8 max-w-4xl">
         {error && <p className="text-sm text-red-600">{error}</p>}
 
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center gap-2">
           <h2 className="text-lg font-semibold">Categorie e aree di rischio</h2>
           <button onClick={handleNuovaCategoria} className="text-sm text-brand-700 hover:underline">
             + Nuova categoria
@@ -94,7 +94,7 @@ export function AdminSocietaDetail() {
 
         {categorie.map((cat) => (
           <section key={cat.id} className="space-y-2">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-wrap justify-between items-center gap-2">
               <h3 className="font-semibold text-brand-800">{cat.nome}</h3>
               <button
                 onClick={() => handleNuovaArea(cat.id)}

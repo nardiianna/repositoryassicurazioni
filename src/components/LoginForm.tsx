@@ -23,10 +23,10 @@ export function LoginForm({ title, redirectTo }: { title: string; redirectTo: st
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-brand-900">
+    <div className="min-h-screen flex items-center justify-center bg-brand-900 px-4 py-8">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-sm space-y-4 rounded-lg bg-white p-8 shadow-xl"
+        className="w-full max-w-sm space-y-4 rounded-lg bg-white p-6 shadow-xl sm:p-8"
       >
         <Link to="/" className="inline-block text-sm text-gray-400 hover:text-gray-600">
           ← Indietro
@@ -37,7 +37,7 @@ export function LoginForm({ title, redirectTo }: { title: string; redirectTo: st
           placeholder="Email"
           required
           autoComplete="email"
-          className="w-full rounded border border-gray-300 px-3 py-2 text-sm"
+          className="w-full rounded border border-gray-300 px-3 py-2 text-base"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -46,7 +46,7 @@ export function LoginForm({ title, redirectTo }: { title: string; redirectTo: st
           placeholder="Password"
           required
           autoComplete="current-password"
-          className="w-full rounded border border-gray-300 px-3 py-2 text-sm"
+          className="w-full rounded border border-gray-300 px-3 py-2 text-base"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
