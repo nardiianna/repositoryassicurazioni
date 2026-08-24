@@ -23,7 +23,7 @@ function Home() {
           to="/admin"
           className="w-full text-center rounded-lg border-2 border-white text-white py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
         >
-          Area Anna e Federico
+          Area Federico
         </Link>
         <Link
           to="/cliente"
